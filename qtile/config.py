@@ -115,9 +115,10 @@ for i in groups:
 
 layout_theme = {"border_width": 2,
                 "margin": 10,
+                #for a more practical rather than fancy tiling
+                #margin: 6,
                 "border_focus": "elacff",
                 "border_normal": "1D2330"
-                
                 }
 
 layouts = [
@@ -263,6 +264,7 @@ mouse = [
     Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
     Drag([mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()),
     Click([mod], "Button2", lazy.window.bring_to_front()),
+    Click([mod], "Button1", lazy.window.set_windowed())
 ]
 
 dgroups_key_binder = None
